@@ -65,10 +65,11 @@ embassy = [
 defmt = ["dep:defmt"]
 memory-x = ["ch32-metapac/memory-x"]
 
+time = []
 
 # Features starting with `_` are for internal use only. They're not intended
 # to be enabled by other crates, and are not covered by semver guarantees.
-_time-driver = []
+_time-driver = ["time"]
 
 ## Use any time driver
 time-driver-any = ["_time-driver"]
