@@ -7,6 +7,8 @@ use core::task::Poll;
 use embassy_futures::select::{select, Either};
 use embassy_sync::waitqueue::AtomicWaker;
 use embedded_hal::i2c::Operation;
+#[cfg(feature = "time")]
+use embassy_time::{Duration, Instant};
 
 use crate::dma::ChannelAndRequest;
 use crate::gpio::{AFType, Speed};
